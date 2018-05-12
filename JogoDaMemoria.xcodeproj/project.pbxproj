@@ -54,14 +54,22 @@
 		543A3A0D20A6938100EDE2DA /* JogoDaMemoria */ = {
 			isa = PBXGroup;
 			children = (
-				543A3A0E20A6938100EDE2DA /* AppDelegate.swift */,
+				543A3A2020A6974300EDE2DA /* Suporting Files */,
 				543A3A1020A6938100EDE2DA /* ViewController.swift */,
 				543A3A1220A6938100EDE2DA /* Main.storyboard */,
-				543A3A1520A6938300EDE2DA /* Assets.xcassets */,
-				543A3A1720A6938300EDE2DA /* LaunchScreen.storyboard */,
 				543A3A1A20A6938300EDE2DA /* Info.plist */,
 			);
 			path = JogoDaMemoria;
+			sourceTree = "<group>";
+		};
+		543A3A2020A6974300EDE2DA /* Suporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				543A3A0E20A6938100EDE2DA /* AppDelegate.swift */,
+				543A3A1520A6938300EDE2DA /* Assets.xcassets */,
+				543A3A1720A6938300EDE2DA /* LaunchScreen.storyboard */,
+			);
+			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

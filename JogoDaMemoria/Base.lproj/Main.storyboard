@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flips: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlf-ki-WAh">
-                                <rect key="frame" x="43" y="702" width="289" height="76"/>
+                                <rect key="frame" x="43" y="627" width="289" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.036209988679999999" blue="0.082766285829999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -169,12 +169,20 @@
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFW-3n-vA6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record: ∞" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T03-Vc-WWk">
+                                <rect key="frame" x="43" y="717" width="289" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.036209988679999999" blue="0.082766285829999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="rlf-ki-WAh" id="RLd-aJ-sbl"/>
+                        <outlet property="recordLabel" destination="T03-Vc-WWk" id="E0E-cW-CT1"/>
                         <outletCollection property="cardButtons" destination="5Mc-RE-QTq" collectionClass="NSMutableArray" id="dOa-ct-IDW"/>
                         <outletCollection property="cardButtons" destination="cc4-kt-Sh9" collectionClass="NSMutableArray" id="mC8-sj-N75"/>
                         <outletCollection property="cardButtons" destination="E7U-jO-NX4" collectionClass="NSMutableArray" id="g7a-c2-Id3"/>

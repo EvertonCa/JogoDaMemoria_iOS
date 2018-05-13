@@ -19,8 +19,18 @@ class ViewController: UIViewController
             flipCountLabel.text = "Flips: \(flipCount)"
         }
     }
+    
+    var record: Int?
+    {
+        didSet
+        {
+            recordLabel.text = "Record: \(flipCount)"
+        }
+    }
 
     @IBOutlet weak var flipCountLabel: UILabel!
+    
+    @IBOutlet weak var recordLabel: UILabel!
     
     @IBOutlet var cardButtons: [UIButton]!
     
@@ -31,6 +41,18 @@ class ViewController: UIViewController
         {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
+            if game.checkIfGameEnded()
+            {
+                if record == nil || record! > flipCount
+                {
+                    record = flipCount
+                }
+                
+                game = JogoDaMemoria(numberOfPairsOfCards: (cardButtons.count + 1) / 2 )
+                emojiChoices = ["😀","😇","😍","😎","😡","😭","😶","😳"]
+                flipCount = 0
+                updateViewFromModel()
+            }
         }
     }
     

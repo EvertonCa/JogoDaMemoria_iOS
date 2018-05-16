@@ -22,21 +22,63 @@ class ViewController: UIViewController
     {
         didSet
         {
-            flipCountLabel.text = "Flips: \(flipCount)"
+            updateLabels()
         }
+    }
+    
+    private func updateLabels()
+    {
+        let attributes:[NSAttributedStringKey:Any] = [
+            .strokeWidth : 5.0,
+            .strokeColor : #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        ]
+        let attributedStringFlips = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLabel.attributedText = attributedStringFlips
+        
+        if record != nil
+        {
+            let attributedStringRecord = NSAttributedString(string: "Record: \(record!)", attributes: attributes)
+            recordLabel.attributedText = attributedStringRecord
+        }
+        
+    }
+    
+    private func createRecordLabel()
+    {
+        let attributes:[NSAttributedStringKey:Any] = [
+            .strokeWidth : 5.0,
+            .strokeColor : #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        ]
+        let attributedStringRecord = NSAttributedString(string: "Record: ∞", attributes: attributes)
+        recordLabel.attributedText = attributedStringRecord
     }
     
     var record: Int?
     {
         didSet
         {
-            recordLabel.text = "Record: \(flipCount)"
+            updateLabels()
         }
     }
 
     @IBOutlet private weak var flipCountLabel: UILabel!
+    {
+        didSet
+        {
+            updateLabels()
+        }
+    }
     
     @IBOutlet private weak var recordLabel: UILabel!
+    {
+        didSet
+        {
+            if record == nil
+            {
+                createRecordLabel()
+            }
+        }
+    }
     
     @IBOutlet private var cardButtons: [UIButton]!
     
@@ -55,7 +97,7 @@ class ViewController: UIViewController
                 }
                 
                 game = JogoDaMemoria(numberOfPairsOfCards: (cardButtons.count + 1) / 2 )
-                emojiChoices = ["😀","😇","😍","😎","😡","😭","😶","😳"]
+                emojiChoices = "😀😇😍😎😡😭😶😳"
                 flipCount = 0
                 updateViewFromModel()
             }
@@ -82,7 +124,9 @@ class ViewController: UIViewController
         }
     }
     
-    private var emojiChoices = ["😀","😇","😍","😎","😡","😭","😶","😳"]
+    // private var emojiChoices = ["😀","😇","😍","😎","😡","😭","😶","😳"]
+    
+    private var emojiChoices = "😀😇😍😎😡😭😶😳"
     
     private var emoji = [Card:String]()
     
@@ -90,7 +134,8 @@ class ViewController: UIViewController
     {
         if emoji[card] == nil, emojiChoices.count > 0
         {
-            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4random)
+            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random)
+            emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
             
         }
         return emoji[card] ?? "?"

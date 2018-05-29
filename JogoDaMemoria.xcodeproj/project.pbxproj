@@ -10,10 +10,11 @@
 		5437E9B820A8163A0034721E /* JogoDaMemoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5437E9B720A8163A0034721E /* JogoDaMemoria.swift */; };
 		5437E9BA20A816F70034721E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5437E9B920A816F70034721E /* Card.swift */; };
 		543A3A0F20A6938100EDE2DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543A3A0E20A6938100EDE2DA /* AppDelegate.swift */; };
-		543A3A1120A6938100EDE2DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543A3A1020A6938100EDE2DA /* ViewController.swift */; };
+		543A3A1120A6938100EDE2DA /* JogoDaMemoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543A3A1020A6938100EDE2DA /* JogoDaMemoriaViewController.swift */; };
 		543A3A1420A6938100EDE2DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543A3A1220A6938100EDE2DA /* Main.storyboard */; };
 		543A3A1620A6938300EDE2DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543A3A1520A6938300EDE2DA /* Assets.xcassets */; };
 		543A3A1920A6938300EDE2DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543A3A1720A6938300EDE2DA /* LaunchScreen.storyboard */; };
+		5453EA6B20BD3BE30065A190 /* JogoDaMemoriaThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5453EA6A20BD3BE30065A190 /* JogoDaMemoriaThemeChooserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,12 @@
 		5437E9B920A816F70034721E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		543A3A0B20A6938100EDE2DA /* JogoDaMemoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogoDaMemoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543A3A0E20A6938100EDE2DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		543A3A1020A6938100EDE2DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		543A3A1020A6938100EDE2DA /* JogoDaMemoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoDaMemoriaViewController.swift; sourceTree = "<group>"; };
 		543A3A1320A6938100EDE2DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		543A3A1520A6938300EDE2DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		543A3A1820A6938300EDE2DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		543A3A1A20A6938300EDE2DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5453EA6A20BD3BE30065A190 /* JogoDaMemoriaThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoDaMemoriaThemeChooserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 		543A3A0D20A6938100EDE2DA /* JogoDaMemoria */ = {
 			isa = PBXGroup;
 			children = (
+				5453EA6A20BD3BE30065A190 /* JogoDaMemoriaThemeChooserViewController.swift */,
 				543A3A2020A6974300EDE2DA /* Suporting Files */,
-				543A3A1020A6938100EDE2DA /* ViewController.swift */,
+				543A3A1020A6938100EDE2DA /* JogoDaMemoriaViewController.swift */,
 				543A3A1220A6938100EDE2DA /* Main.storyboard */,
 				5437E9B720A8163A0034721E /* JogoDaMemoria.swift */,
 				5437E9B920A816F70034721E /* Card.swift */,
@@ -150,7 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5437E9B820A8163A0034721E /* JogoDaMemoria.swift in Sources */,
-				543A3A1120A6938100EDE2DA /* ViewController.swift in Sources */,
+				543A3A1120A6938100EDE2DA /* JogoDaMemoriaViewController.swift in Sources */,
+				5453EA6B20BD3BE30065A190 /* JogoDaMemoriaThemeChooserViewController.swift in Sources */,
 				543A3A0F20A6938100EDE2DA /* AppDelegate.swift in Sources */,
 				5437E9BA20A816F70034721E /* Card.swift in Sources */,
 			);
